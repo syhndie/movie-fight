@@ -1,4 +1,10 @@
-const createAutocomplete = ({ root, renderOption, onOptionSelect, inputValue }) => {
+const createAutocomplete = ({
+    root,
+    renderOption,
+    onOptionSelect,
+    inputValue,
+    fetchData
+}) => {
     root.innerHTML = `
         <label><b>Enter a Movie Title</b></label>
         <input class="input" />
@@ -15,7 +21,6 @@ const createAutocomplete = ({ root, renderOption, onOptionSelect, inputValue }) 
 
     const onInput = async (event) => {
         const movies = await fetchData(event.target.value);
-
         if (movies.length === 0) {
             dropdown.classList.remove('is-active');
             return;
