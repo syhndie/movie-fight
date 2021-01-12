@@ -80,9 +80,9 @@ const runComparison = () => {
         const leftSideValue = parseFloat(leftStat.dataset.value);
         const rightSideValue = parseFloat(rightStat.dataset.value);
 
-        leftStat.classList.remove('has-background-primary-light');
+        leftStat.classList.remove('is-primary-faded');
         leftStat.classList.add('is-primary');
-        rightStat.classList.remove('has-background-primary-light');
+        rightStat.classList.remove('is-primary-faded');
         rightStat.classList.add('is-primary');
 
         if (isNaN(leftSideValue) || isNaN(rightSideValue)) {
@@ -93,10 +93,10 @@ const runComparison = () => {
         }
         if (rightSideValue > leftSideValue) {
             leftStat.classList.remove('is-primary');
-            leftStat.classList.add('has-background-primary-light');
+            leftStat.classList.add('is-primary-faded');
         } else {
             rightStat.classList.remove('is-primary');
-            rightStat.classList.add('has-background-primary-light');
+            rightStat.classList.add('is-primary-faded');
         }
     });
 }

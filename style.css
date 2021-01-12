@@ -1,3 +1,8 @@
+.is-primary-faded {
+  background-color: hsl(171, 90%, 70%);
+  color: hsl(0, 0%, 96%);
+
+}
 .tutorial {
   width: 600px;
   text-align: center;
