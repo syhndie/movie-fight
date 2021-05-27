@@ -1,5 +1,5 @@
 //helper function to limit rate of firing of an argument function
-const debounce = (func, delay = 1500) => {
+const debounce = (func, delay = 500) => {
     let timeoutId;
     //...args means all arguments that the argument function might have
     return (...args) => {
