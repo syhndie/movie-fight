@@ -52,3 +52,14 @@ it('dropdown appears on input', async () => {
     const dropdown = document.querySelector('.dropdown');
     expect(dropdown.className).to.include('is-active');
 });
+
+it('after searching, displays some results', async () => {
+    const input = document.querySelector('input');
+    input.value = 'squiggles';
+    input.dispatchEvent(new Event('input'));
+
+    await waitFor('.dropdown-item');  
+
+    const items = document.querySelectorAll('.dropdown-item');
+    expect(items.length).to.equal(3);
+})
